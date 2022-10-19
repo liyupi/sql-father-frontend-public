@@ -45,10 +45,10 @@ const GlobalFooter: React.FC = () => {
           key: 'github',
           title: (
             <>
-              <GithubOutlined /> 作者 GitHub
+              <GithubOutlined /> 代码已开源
             </>
           ),
-          href: 'https://github.com/liyupi',
+          href: 'https://github.com/liyupi/sql-father-frontend-public',
           blankTarget: true,
         },
         {
