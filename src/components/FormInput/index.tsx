@@ -68,6 +68,14 @@ const FormInput: React.FC<Props> = forwardRef((props, ref) => {
       message.error('至少新增 1 个字段');
       return;
     }
+    for (var i=0; i<values.fieldList.length-1; i++) {
+      for (var j=i+1; j<values.fieldList.length; j++) {
+        if (values.fieldList[i].fieldName==values.fieldList[j].fieldName) {
+          message.error('字段名不能重复');
+          return;
+        }
+      }
+    }
     console.log('Received values of form:', values);
     onSubmit?.(values);
   };
