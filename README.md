@@ -8,7 +8,7 @@
 
 
 
-在线体验：[https://sqlfather.com/](https://sqlfather.com/)
+在线体验：[http://sqlfather.yupi.icu](http://sqlfather.yupi.icu)
 
 视频演示（使用教程）：[https://www.bilibili.com/video/BV1eP411N7B7/](https://www.bilibili.com/video/BV1eP411N7B7/)
 
@@ -24,6 +24,8 @@
 
 ![](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666090763987-f768817c-89d6-4326-b7e1-5ad06d5cc875-20221019132239543-20221019132502106-20221019132511275.png)
 
+
+⭐️ 我在自己的 [编程知识星球](https://yupi.icu) 内给大家详细解读了这个项目的创作思路 + 技术选型 + 系统设计 + 源码解读 + 简历写法分享，如果你希望把这个项目写到简历上、或者深入学习，欢迎 [加入我的星球](https://yupi.icu) 观看。
 
 
 ## 项目背景
