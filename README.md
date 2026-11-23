@@ -23,7 +23,7 @@
 
 SQL Father（SQL 之父）是一款面向开发者、测试人员与数据分析师的在线建表和模拟数据生成平台，本仓库为其基于 React 18 与 Umi 4 构建的前端工程代码，配套的 Java Spring Boot 后端仓库位于 [liyupi/sql-father-backend-public](https://github.com/liyupi/sql-father-backend-public)。你可以直接访问 [http://sqlfather.yupi.icu](http://sqlfather.yupi.icu) 体验线上成品，或者通过 [B 站视频演示教程](https://www.bilibili.com/video/BV1eP411N7B7/) 快速浏览操作流程。
 
-![SQL Father 模拟数据与建表 SQL 生成平台前端主界面截图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666090763987-f768817c-89d6-4326-b7e1-5ad06d5cc875-20221019132239543-20221019132502106-20221019132511275.png)
+![SQL Father 模拟数据与建表 SQL 生成平台前端主界面截图](./doc/images/img-01.png)
 
 项目的诞生源于一个很实际的想法：每当启动一个新项目时，从写建表 SQL 到准备测试假数据往往要耗费大量重复精力，如果有一个简洁直观的网页工具，填写表单或导入文档就能直接得到建好表且填满模拟数据的结果，就能把更多时间留给核心业务开发。至于为什么取名 SQL Father 而不叫 SQL Mother，其实就像面向对象里把基类称为「父类」一样，寓意它是所有业务数据表与测试数据的统一源头。
 
@@ -37,23 +37,23 @@ SQL Father（SQL 之父）是一款面向开发者、测试人员与数据分析
 
 在从零规划新表结构时，你可以直接在前端可视化表单中增删字段、拖拽调整顺序并设置主键、非空、自增与模拟规则，点击生成即可同步查看建表语句、批量插入 SQL、模拟数据预览、JSON 以及 Java 和前端代码。
 
-![SQL Father 前端可视化动态表单与多格式生成结果界面截图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666098192337-c6ef4c6f-1d41-421e-882f-a40b17f8790f-20221019132251475-20221019132502279-20221019132511408.png)
+![SQL Father 前端可视化动态表单与多格式生成结果界面截图](./doc/images/img-02.png)
 
 当你手头已有现成的表定义时，前端提供了多种快捷导入弹窗，包括直接粘贴建表 SQL 语句导入、上传 Excel 文件解析表头导入、导入历史配置 JSON，以及输入几个关键词自动推断字段的智能导入功能，大幅缩短录入时间。
 
-![SQL Father 智能导入、建表 SQL 导入与 Excel 导入操作弹窗截图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666098420835-59bfcd91-072c-45e9-a415-2fca70afd996-20221019132502336-20221019132511479.png)
+![SQL Father 智能导入、建表 SQL 导入与 Excel 导入操作弹窗截图](./doc/images/img-03.png)
 
 针对每个字段的数据生成策略，界面支持灵活切换固定值、随机值、正则表达式、递增序列以及关联词库随机抽样，配置过程实时直观，满足各类业务测试需求。
 
-![SQL Father 字段级模拟数据生成规则可视化配置截图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666099678320-ffafe59e-60c5-49c7-aeb4-1c20ba3c4f4a-20221019132502444-20221019132511599.png)
+![SQL Father 字段级模拟数据生成规则可视化配置截图](./doc/images/img-04.png)
 
 平台同时构建了社区共享模块，用户可以在前端浏览其他开发者分享的词库、完整表结构与常用字段定义，支持一键复制语句或一键导入到当前工作台进行二次修改，让表设计经验高效复用。
 
-![SQL Father 社区表结构与字段信息共享广场页面截图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666098509897-6fb00eee-79dd-4608-a364-8a0b5271a392-20221019132502525-20221019132511687.png)
+![SQL Father 社区表结构与字段信息共享广场页面截图](./doc/images/img-05.png)
 
 在词库广场中，你可以直接基于公开词库一键生成系统字典表，或者下载作为分析研究用的数据集，并支持继承已有词库继续扩充词条。
 
-![SQL Father 公开词库列表、词库继承与字典表生成界面截图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666099806973-f48785e1-3d6c-49c9-a093-77c234d4f8b1-20221019132502586-20221019132511780.png)
+![SQL Father 公开词库列表、词库继承与字典表生成界面截图](./doc/images/img-06.png)
 
 ### 前后台功能大全
 
@@ -88,7 +88,7 @@ SQL Father（SQL 之父）是一款面向开发者、测试人员与数据分析
 
 了解全栈数据流向有助于更好地阅读前端表单结构、状态管理与接口契约。整个 SQL Father 平台的核心架构思想是**将所有输入方式收敛为统一 Schema，再由统一 Schema 驱动各类输出**，即「任意输入 => 统一 Schema => 任意输出」。
 
-![SQL Father 任意输入转统一 Schema 再生成任意输出的全栈架构图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666144811181-37d5bd7f-28fa-4b17-9147-ae7de8de1585-20221019132502647-20221019132511901.png)
+![SQL Father 任意输入转统一 Schema 再生成任意输出的全栈架构图](./doc/images/img-07.png)
 
 系统后端核心代码位于 `core` 目录下，整体拆分为 Schema 构造器、统一 Schema 定义、多类型生成器与共享服务四个职责清晰的模块。前端所有的表单编辑与快捷导入交互，最终都会围绕同一份 JSON Schema 进行双向绑定与接口通信。
 
@@ -119,19 +119,19 @@ SQL Father（SQL 之父）是一款面向开发者、测试人员与数据分析
 
 在收到前端发起的导入请求时，后端 `TableSchemaBuilder` 会将智能输入、SQL 或 Excel 转换为上述 `TableSchema` 对象。其中根据 SQL 反向解析表结构直接借助了 Druid 内置的 SQL 语法解析器，稳定高效且避免了重复造轮子。
 
-![TableSchemaBuilder 核心构造方法类图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666144943025-0d62bf99-5ee6-4135-89da-a0bf270f3f49-20221019132502695-20221019132512014.png)
+![TableSchemaBuilder 核心构造方法类图](./doc/images/img-08.png)
 
 进入生成阶段后，后端在 `core/builder` 目录下为每种输出类型定义了独立的 Builder，其中 `SqlBuilder` 结合策略模式、单例模式与工厂模式支持多种数据库方言，`JavaCodeBuilder` 与 `FrontendCodeBuilder` 则通过 FreeMarker 模板引擎动态渲染前后端代码。
 
-![SQL Father core/builder 多种代码与 SQL 生成器结构图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666145274014-bb582f01-31dd-442c-835a-64c1e9fd61a5-20221019132502741-20221019132512095.png)
+![SQL Father core/builder 多种代码与 SQL 生成器结构图](./doc/images/img-09.png)
 
-![FreeMarker 前后端代码生成模板截图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666146737562-53f46d04-489d-4d00-ab9b-11cf237cd4a9-20221019132502769-20221019132512184.png)
+![FreeMarker 前后端代码生成模板截图](./doc/images/img-10.png)
 
 在模拟数据生成环节，后端通过 `DataGeneratorFactory` 工厂模式统一管理各类规则生成器，底层分别依赖 Datafaker 实现随机数据生成（`RandomDataGenerator`）以及 Generex 实现正则表达式造数（`RuleDataGenerator`），最后由门面模式封装统一生成与校验入口返回给前端展示。
 
-![DataGeneratorFactory 模拟数据生成器工厂模式示意图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666145631468-8d0d5dad-0cd8-41a5-8a8b-e65c5feb7829-20221019132502828-20221019132512285.png)
+![DataGeneratorFactory 模拟数据生成器工厂模式示意图](./doc/images/img-11.png)
 
-![GeneratorFacade 门面模式统一生成入口示意图](https://xingqiu-tuchuang-1256524210.cos.ap-shanghai.myqcloud.com/1/1666145871478-af8512a5-d9c3-4166-8253-0304639c62b0-20221019132502858-20221019132512359.png)
+![GeneratorFacade 门面模式统一生成入口示意图](./doc/images/img-12.png)
 
 ## 🚀 快速启动
 
